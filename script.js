@@ -113,6 +113,7 @@
 
 
 let pyodideReadyPromise = loadPyodide({ indexURL: "https://cdn.jsdelivr.net/pyodide/v0.18.1/full/" });
+alert("Welcome to FireFly!")
 
 // Event listener for language change
 document.getElementById('language').addEventListener('change', (event) => {
