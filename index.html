@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verification</title>
+    <style>
+        body {
+            background-color: #1e1e1e;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            padding: 20px;
+            border: 2px solid #e84545;
+            border-radius: 10px;
+        }
+        .container h1 {
+            color: #e84545;
+        }
+    </style>
+</head>
+<body onload="redirectAfterInterval()">
+    <div class="container">
+        <h1>Verifying you are human</h1>
+        <p>This may take a few seconds...</p>
+        <!-- Insert Cloudflare verification code here -->
+        <div id="verification-widget">
+            <!-- Cloudflare Widget -->
+        </div>
+    </div>
+    <script>
+        // Function to redirect after a certain time interval
+        function redirectAfterInterval() {
+            // Set the time interval (in milliseconds)
+            var interval = 5000; // 5000 milliseconds = 5 seconds
+            // URL to redirect to
+            var url = "https://divyanshugupta0.github.io/fireflycompiler/#";
+            // Redirect after the interval
+            setTimeout(function() {
+                window.location.href = url;
+            }, interval);
+        }
+    </script>
+</body>
+</html>
