@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FireFly Compiler</title>
+    <link rel="stylesheet" href="compiler.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="title">FireFly Compiler</h1>
+        <div class="form-group">
+            <label for="language">Select Language:</label>
+            <select id="language">
+                <option value="python">Python</option>
+                <option value="javascript">JavaScript</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="code">Enter Your Code:</label>
+            <textarea id="code" rows="10" placeholder="Write your code here..." onkeydown="handleTabKey(event)"></textarea>
+        </div>
+        <button id="run-btn">Run Code</button>
+        <div class="form-group">
+            <label for="output">Output:</label>
+            <textarea id="output" rows="10" readonly></textarea>
+        </div>
+    </div>
+    <div class="container">
+        <a href="#" id="share-btn" class="share-button">
+            <img src="share-icon.png" alt="Share">
+        </a>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Developed by Divyanshu Gupta. All rights reserved &copy; 2024</p>
+        </div>
+    </footer>
+    
+    
+
+    <!-- Pyodide for Python -->
+    <script src="https://cdn.jsdelivr.net/pyodide/v0.18.1/full/pyodide.js"></script>
+    <script src="compiler.js"></script>
+</body>
+</html>
