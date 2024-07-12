@@ -127,7 +127,7 @@ document.getElementById('language').addEventListener('change', (event) => {
 // Event listener for run button
 document.getElementById('run-btn').addEventListener('click', async () => {
     const language = document.getElementById('language').value;
-    const code = document.getElementById('code').value;
+    const code-editor = document.getElementById('code-editor').value;
     const outputElement = document.getElementById('output');
     
     outputElement.value = '';  // Clear previous output
@@ -144,7 +144,7 @@ document.getElementById('run-btn').addEventListener('click', async () => {
                 sys.stdout = StringIO()
             `);
             
-            await pyodide.runPythonAsync(code);
+            await pyodide.runPythonAsync(code-editor);
             
             // Capture output
             let result = pyodide.runPython(`
@@ -175,7 +175,7 @@ function handleTabKey(event) {
 }
 
 // Event listener for Ctrl + / to comment/uncomment lines
-const codeTextarea = document.getElementById('code');
+const codeTextarea = document.getElementById('code-editor');
 
 codeTextarea.addEventListener('keydown', function(event) {
     // Check if Ctrl key is pressed and '/' key is pressed
